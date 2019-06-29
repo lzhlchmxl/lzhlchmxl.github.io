@@ -1,4 +1,6 @@
 body {
+    margin: 2vh 5vw;
+    font-family: Muli;
 }
 
 ul {
@@ -12,10 +14,11 @@ li {
 
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top:3vh;
     align-items: center;
-    font-family: Muli;
+    max-width:1200px;
+    margin: 0 auto;
 }
 
 .header__nav {
@@ -26,6 +29,7 @@ li {
     display:flex;
     align-items:center;
     position: relative;
+    margin-right: 50px;
 }
 
 .header__link {
@@ -90,4 +94,55 @@ li {
     width: 150px;
     background-position: 10px center; 
     padding-left:30px;
+}
+
+
+.intro {
+    display: flex;
+    justify-content: center;
+    margin:20vh auto 0 auto;
+    max-width: 1200px;
+}
+
+.intro__info {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.intro__info * {
+    margin:2vh 0;
+}
+
+.intro__info h2 {
+    font-weight: bold;
+    color: #6C6C6C;
+    font-size: 1em;
+}
+
+.intro__info h1 {
+    font-family: "Quicksand";
+    font-size: 3em;
+}
+
+.intro__info p {
+    width: 80%;
+}
+
+.intro__link--action {
+    width:fit-content;
+    border: 1px solid #F8A01C;
+    padding: 5px 10px;
+    border-radius: 50px;
+    transition: background-color 0.5s ease;
+}
+
+.intro__link--action:hover {
+    cursor: pointer;
+    background-color:#F8A01C;
+    color:white;
+}
+
+.intro__image {
+    width:30vw;
 }
