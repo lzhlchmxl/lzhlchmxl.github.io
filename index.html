@@ -10,7 +10,8 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-    <header class="header">
+
+    <nav class="header">
         <ul class="header__nav">
             <li class="header__link">Features</li>
             <li class="header__link">Pricing</li>
@@ -21,16 +22,14 @@
         </div>
         <ul class="header__acc">
             <li class="header__link">Log In</li>
-            <li class="header__link--action">Get Started</li>
+            <a href="" class="button">Get Started</a>
             <form class="header__search">
                 <input type="text" name="search" onfocusout="this.value=''">
             </form>
         </ul>
+    </nav>
 
-
-    </header>
-
-    <section class="intro">
+    <header class="intro">
         <div class="intro__info">
             <div class="ball__container ball__container--info">
                 <div class="ball ball__orange"></div>
@@ -39,10 +38,10 @@
             <span>PEOPLE MANAGEMENT SOFTWARE</span>
             <h1>Full-circle HR Platform for Everyone in Your Company.</h1>
             <p>It’s the HR software that makes everyone happier. From candidate mangement, payroll to annual performance review, Talentree has it all.</p>
-            <div class="intro__link--action">Get Started</div>
+            <a href="#" class="button">Get Started</a>
         </div>
         <img class="intro__image" src="assets/intro_women_group.svg" alt="Image of happy women in a group"/>
-    </section>
+    </header>
 
     <div class="text">Inclusive
         <div class="ball__container ball__container--features">
@@ -77,6 +76,21 @@
                 <div class="feature__head">Benefits</div>
                 <div class="feature__content">Manage benefits and pension enrollment using one HR platform that synce with payroll and others. </div>
             </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="newsletter__content">
+            <span class="tag">Newsletter</span>
+            <h2 class="h2--white">Don't miss a single things</h2>
+            <form action="" method="POST">
+                <input
+                    class="input"
+                    type="email"
+                    placeholder="Enter your email address..."
+                >
+                <button class="button button--orange" type="submit">Get Started</button>
+            </form>
         </div>
     </section>
 
