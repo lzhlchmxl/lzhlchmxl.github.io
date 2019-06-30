@@ -1,21 +1,47 @@
 $(document).ready(function(){
-    $("p").click(function(){
-        alert("JS and Jquery is Working");
-    });
-
-    $(".ball").map(function(index, ball){
-        initiateBall($(ball));
-     });
-
+   
+    triggerBalls();
+    // $(".feature__item").hover(function(){
+    //     $(".feature__shape", this).attr('class').split(' ')[1];
+    // }, function(){});
     setInterval(function() {
         $(".ball").map(function(index, ball){
             initiateBall($(ball));
          });
-    }, 10000);
+    }, 5000);
+
 });
 
+// Setup isScrolling variable
+var isScrolling;
+
+// Listen for scroll events
+window.addEventListener('scroll', function ( event ) {
+
+	// Clear our timeout throughout the scroll
+	window.clearTimeout( isScrolling );
+
+	// Set a timeout to run after scrolling ends
+	isScrolling = setTimeout(function() {
+
+		// Run the callback
+		triggerBalls();
+
+	}, 66);
+
+}, false);
+
+function triggerBalls() {
+    $(".ball").map(function(index, ball){
+        initiateBall($(ball));
+     });
+ 
+}
+
 function initiateBall(ball) {
-    if (isElementInViewport(ball.parent())) {
+    console.log(ball.parent()[0]);
+    console.log(isElementInViewport(ball.parent()[0]));
+    if (isElementInViewport(ball.parent()[0])) {
         moveBall(ball);
         // console.log("in view");
     }
@@ -23,14 +49,9 @@ function initiateBall(ball) {
 }
 
 function isElementInViewport (el) {
-    
-    // jQuery
-    if (typeof jQuery === "function" && el instanceof jQuery) {
-        el = el[0];
-    }
 
     // get position attributes
-    var rect = el.getBoundingClientRect();
+    let rect = el.getBoundingClientRect();
 
     return (
         rect.top >= 0 &&
