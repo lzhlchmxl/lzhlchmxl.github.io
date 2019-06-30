@@ -1,4 +1,6 @@
 :root {
+    --color-bg: rgba(196, 196, 196, 0.08);
+    --color-white: #fff;
     --main-color:#F8A01C;
     --purple: #E350CB;
     --yellow: #F8E71C;
@@ -6,12 +8,23 @@
     --blue:#5385F7;
     --intro-info-width: 30vw;
     --intro-image-width: 30vw;
+    --width-body: 90vw;
+    --width-content: 60vw;
+    --spacing-h2: 3vh;
 }
 
 body {
     margin: 2vh 0;
-    font-family: Muli;
-    background: rgba(196, 196, 196, 0.08);
+    background-color: var(--color-bg);
+    font-family: 'Muli', sans-serif;
+}
+
+h1, h2 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+p {
+    font-size: 18px;
 }
 
 ul {
@@ -23,12 +36,18 @@ li {
     list-style: none;
 }
 
+.logo {
+    width: 170px;
+    height: 30px
+}
+
 .header {
     display: flex;
     justify-content: space-between;
     margin:3vh 5vw 0 5vw;
     align-items: center;
-    max-width:1200px;
+    width: var(--width-body);
+    align-self: center;
 }
 
 .header__nav {
@@ -94,7 +113,7 @@ li {
     font-size: 16px;
     background-color: var(--main-color);
     background-image: url("../assets/search_icon.svg");
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     transition: width 0.4s ease-in-out;
     color:white;
@@ -102,7 +121,7 @@ li {
 
 .header__search input[type=text]:focus {
     width: 150px;
-    background-position: 10px center; 
+    background-position: 10px center;
     padding-left:30px;
 }
 
@@ -125,7 +144,7 @@ li {
     margin:2vh 0;
 }
 
-.intro__info h2 {
+.intro__info span {
     font-weight: bold;
     color: #6C6C6C;
     font-size: 1em;
@@ -162,7 +181,7 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top:3vh;
+    margin-top:var(--spacing-h2);
     align-items: center;
     margin: 0 auto;
     max-width: 1200px;
@@ -197,7 +216,7 @@ li {
     display:flex;
     justify-content: space-between;
     margin-top: 3vh;
-    width:60vw;
+    width:var(--width-content);
 }
 
 .feature__item {
@@ -229,7 +248,7 @@ li {
 .feature__content {
     width:80%;
     text-align: center;
-    margin-top:10px;
+    margin:20px 0;
 }
 
 .feature__shape--blue {
@@ -291,7 +310,7 @@ li {
     left:0;
 }
 
-.ball__orange { 
+.ball__orange {
     width: 100%;
     padding-bottom:100%;
     background-color: var(--main-color);
@@ -312,4 +331,28 @@ li {
     padding-bottom:50%;
     background-color: var(--yellow);
     transition: transform 5s linear;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 60px 0;
+    /* TODO: Remove this when above section is created */
+    margin: 130px auto;
+    width: var(--width-body);
+}
+
+.footer__content {
+    margin: 30px 0;
+    max-width: 530px;
+}
+
+.footer__social a {
+    margin-right: 20px;
+}
+
+.footer__social a:last-child {
+    margin-right: 0;
 }

@@ -3,18 +3,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Talentree</title>
     <link rel="stylesheet" href="css/index.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,700|Quicksand:500&display=swap" rel="stylesheet">
     <script src="frameworks/jquery.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
-    <section class="header">
+    <header class="header">
         <ul class="header__nav">
             <li class="header__link">Features</li>
             <li class="header__link">Pricing</li>
             <li class="header__link">Resources</li>
         </ul>
-        <div class="header__logo">
+        <div class="logo">
             <img src="assets/logo.svg" alt="Logo Image"/>
         </div>
         <ul class="header__acc">
@@ -24,9 +26,9 @@
                 <input type="text" name="search" onfocusout="this.value=''">
             </form>
         </ul>
-        
 
-    </section>
+
+    </header>
 
     <section class="intro">
         <div class="intro__info">
@@ -34,7 +36,7 @@
                 <div class="ball ball__orange"></div>
                 <div class="ball ball__purple"></div>
             </div>
-            <h2>PEOPLE MANAGEMENT SOFTWARE</h2>
+            <span>PEOPLE MANAGEMENT SOFTWARE</span>
             <h1>Full-circle HR Platform for Everyone in Your Company.</h1>
             <p>It’s the HR software that makes everyone happier. From candidate mangement, payroll to annual performance review, Talentree has it all.</p>
             <div class="intro__link--action">Get Started</div>
@@ -79,6 +81,17 @@
     </section>
 <!-- <h1>Talentree - Build your talent</h1>
 <p>CSS is working. Click me to check JS</p> -->
+
+    <footer class="footer">
+        <img class="logo" src="./assets/logo.svg" alt="Talentree logo">
+        <p class="footer__content">HR made simple with Talentree, a platform that helps your company with everything HR related from hiring to benefits.</p>
+        <div class="footer__social">
+            <a href="#"><img src="./assets/facebook.svg" alt="Facebook logo"></a>
+            <a href="#"><img src="./assets/instagram.svg" alt="Facebook logo"></a>
+            <a href="#"><img src="./assets/linkedin.svg" alt="Facebook logo"></a>
+            <a href="#"><img src="./assets/ twitter.svg" alt="Facebook logo"></a>
+        </div>
+    </footer>
 
 </body>
 </html>
