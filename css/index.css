@@ -1,3 +1,9 @@
+:root {
+    --main-color:#F8A01C;
+    --intro-info-width: 30vw;
+    --intro-image-width: 30vw;
+}
+
 body {
     margin: 2vh 5vw;
     font-family: Muli;
@@ -39,14 +45,14 @@ li {
 }
 
 .header__link:hover {
-    color:#F8A01C;
+    color:var(--main-color);
     cursor: pointer;
 }
 
 .header__link:after {
     content: "";
     position: absolute;
-    border-top: 1px solid #F8A01C;
+    border-top: 1px solid var(--main-color);
     width: 0%;
     bottom:0;
     left:0;
@@ -58,7 +64,7 @@ li {
 }
 
 .header__link--action {
-    border: 1px solid #F8A01C;
+    border: 1px solid var(--main-color);
     padding: 5px 10px;
     border-radius: 50px;
     transition: background-color 0.5s ease;
@@ -66,7 +72,7 @@ li {
 
 .header__link--action:hover {
     cursor: pointer;
-    background-color:#F8A01C;
+    background-color:var(--main-color);
     color:white;
 }
 
@@ -82,7 +88,7 @@ li {
     box-sizing: border-box;
     border: none;
     font-size: 16px;
-    background-color: #F8A01C;
+    background-color: var(--main-color);
     background-image: url("../assets/search_icon.svg");
     background-position: center; 
     background-repeat: no-repeat;
@@ -107,7 +113,8 @@ li {
 .intro__info {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: var(--intro-info-width);
+    position: relative;
 }
 
 .intro__info * {
@@ -131,7 +138,7 @@ li {
 
 .intro__link--action {
     width:fit-content;
-    border: 1px solid #F8A01C;
+    border: 1px solid var(--main-color);
     padding: 5px 10px;
     border-radius: 50px;
     transition: background-color 0.5s ease;
@@ -139,10 +146,45 @@ li {
 
 .intro__link--action:hover {
     cursor: pointer;
-    background-color:#F8A01C;
+    background-color:var(--main-color);
     color:white;
 }
 
 .intro__image {
-    width:30vw;
+    width:var(--intro-image-width);
+}
+
+.ball__container {
+    position: absolute;
+}
+
+.ball__container--info {
+    height: 60%;
+    width:20vw;
+    left: -20vw;
+}
+
+.ball {
+    position:absolute;
+    transition: transform 10s linear;
+    border-radius: 9999px;
+    z-index:-999;
+    margin: 0;
+    top:0;
+    left:0;
+}
+
+.ball__orange { 
+    width: 100%;
+    padding-bottom:100%;
+    background-color: var(--main-color);
+    left: -10vw;
+    top: 10vh;
+}
+
+.ball__purple {
+    width: 30%;
+    padding-bottom:30%;
+    background-color: purple;
+    left: 10vw;
 }
