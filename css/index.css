@@ -1,16 +1,23 @@
 :root {
+    --color-grey: #E5E5E5;
+    --color-white: #fff;
     --main-color:#F8A01C;
     --intro-info-width: 30vw;
     --intro-image-width: 30vw;
 }
 
 body {
-    margin: 2vh 5vw;
+    background-color: var(--color-grey);
+    margin: 2vh 5vw 100px;
     font-family: 'Muli', sans-serif;
 }
 
 h1, h2 {
     font-family: 'Quicksand', sans-serif;
+}
+
+p {
+    font-size: 18px;
 }
 
 ul {
@@ -20,6 +27,11 @@ ul {
 
 li {
     list-style: none;
+}
+
+.logo {
+    width: 170px;
+    height: 30px
 }
 
 .header {
@@ -191,4 +203,27 @@ li {
     padding-bottom:30%;
     background-color: purple;
     left: 10vw;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-white);
+    padding: 60px 0;
+    /* TODO: Remove this when above section is created */
+    margin-top: 130px;
+}
+
+.footer__content {
+    margin: 30px 0;
+    max-width: 530px;
+}
+
+.footer__social a {
+    margin-right: 20px;
+}
+
+.footer__social a:last-child {
+    margin-right: 0;
 }
