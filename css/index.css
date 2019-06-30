@@ -1,5 +1,5 @@
 :root {
-    --color-grey: #E5E5E5;
+    --color-bg: rgba(196, 196, 196, 0.08);
     --color-white: #fff;
     --main-color:#F8A01C;
     --intro-info-width: 30vw;
@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: var(--color-grey);
+    background-color: var(--color-bg);
     margin: 2vh 5vw 100px;
     font-family: 'Muli', sans-serif;
 }
