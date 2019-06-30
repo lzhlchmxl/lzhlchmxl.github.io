@@ -1,8 +1,4 @@
-$(document).ready(function(){
-    $("p").click(function(){
-        alert("JS and Jquery is Working");
-    });
-
+$(document).ready(function() {
     $(".ball").map(function(index, ball){
         initiateBall($(ball));
      });
@@ -23,7 +19,7 @@ function initiateBall(ball) {
 }
 
 function isElementInViewport (el) {
-    
+
     // jQuery
     if (typeof jQuery === "function" && el instanceof jQuery) {
         el = el[0];
@@ -43,7 +39,7 @@ function isElementInViewport (el) {
 function moveBall(ball) {
     // the returned new demension after passing old ball conatiner demensions into generater
     const newDemensions = generateNumber(ball, (ball.parent()[0].getBoundingClientRect()));
-    
+
     // move the ball
     ball.css({
          transform  : `translate(${newDemensions[0]}px, ${newDemensions[1]}px)`
@@ -61,13 +57,13 @@ function generateNumber(ball, parameters) {
     const initialX = parseInt(ball.css("left"));
     const initialY = parseInt(ball.css("top"));
 
-    // container stats 
+    // container stats
     const top = parameters.top;
     const bottom = parameters.bottom;
     const right = parameters.right;
     const left = parameters.left;
 
-    // generate a random number based on parent width/height - ball's (diameter + it's initial position) 
+    // generate a random number based on parent width/height - ball's (diameter + it's initial position)
     const newY = Math.floor(Math.random() * (bottom - top - diameter - initialY));
     const newX = Math.floor(Math.random() * (right - left - diameter - initialX));
 
