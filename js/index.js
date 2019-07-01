@@ -11,15 +11,15 @@ $(document).ready(function(){
 
     $(window).scroll(function(){
         // console.log($(window).innerHeight());
-        
+
         const viewportHeight = $(window).innerHeight();
         // view port height subtract the difference between eleTop and scroll height
 
-        let offset = $(".ball--static").offset().top - $(window).scrollTop();
+        let offset = $(".ball--static").length && $(".ball--static").offset().top - $(window).scrollTop();
 
         if (offset > viewportHeight) {
             offset = viewportHeight;
-        }       
+        }
         const viewDiff = viewportHeight - offset;
         const ratio =  $(".ball--static").parent().innerHeight() / viewportHeight -0.15;
 

@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Talentree</title>
+    <!-- TODO: Missing description -->
+
     <link rel="stylesheet" href="css/index.css"/>
     <link href="https://fonts.googleapis.com/css?family=Muli:400,700|Quicksand:500&display=swap" rel="stylesheet">
-    <script src="frameworks/jquery.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/parallax.js"></script>
 </head>
 <body>
-
+    <!-- Navbar -->
     <nav class="header">
         <ul class="header__nav">
-            <li class="header__link">Features</li>
-            <li class="header__link">Pricing</li>
-            <li class="header__link">Resources</li>
+            <li class="header__link">
+                <a href="features.html">Features</a>
+            </li>
+            <li class="header__link">
+                <a href="pricing.html">Pricing</a>
+            </li>
         </ul>
         <div class="logo">
             <img src="assets/logo.svg" alt="Logo Image"/>
@@ -36,10 +38,10 @@
                 <div class="ball ball__orange"></div>
                 <div class="ball ball__purple"></div>
             </div>
-            <span>PEOPLE MANAGEMENT SOFTWARE</span>
+            <span class="tag">PEOPLE MANAGEMENT SOFTWARE</span>
             <h1>Full-circle HR Platform for Everyone in Your Company.</h1>
             <p>It’s the HR software that makes everyone happier. From candidate mangement, payroll to annual performance review, Talentree has it all.</p>
-            <a href="#" class="button">Get Started</a>
+            <a href="#newsletter" class="button">Get Started</a>
         </div>
         <img class="intro__image" src="assets/intro_women_group.svg" alt="Image of happy women in a group"/>
     </header>
@@ -91,14 +93,14 @@
             <div class="title title--saving">
                 <div class="title__highlight">SAVE TIME & MONEY</div>
                 <div class="title__header title__header--saving">Quit switching between a million platforms </div>
-                <p>Talentree is a complete HR, benefits, and payroll solution designed to help you seamlessly manage your employees.</p> 
-            </div> 
+                <p>Talentree is a complete HR, benefits, and payroll solution designed to help you seamlessly manage your employees.</p>
+            </div>
             <div class="intro__link--action">Get Started</div>
         </div>
-        
+
     </section>
 
-    <section class="newsletter">
+    <section id="newsletter" class="newsletter">
         <div class="newsletter__content">
             <span class="tag">Newsletter</span>
             <h2 class="h2--white">Don't miss a single things</h2>
@@ -161,5 +163,9 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="frameworks/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/parallax.js"></script>
 </body>
 </html>
