@@ -7,11 +7,11 @@
     --color-text-bold: #6C6C6C;
     --color-blue:#5385F7;
     --color-orange:#F8A01C;
-    --yellow: #F8E71C;
-    --green:#72BE65;
+    --color-yellow: #F8E71C;
+    --color-green:#72BE65;
     --intro-info-width: 30vw;
     --intro-image-width: 30vw;
-    --width-body: 90vw;
+    --width-body: 75vw;
     --width-content: 60vw;
     --spacing-h2: 3vh;
 }
@@ -121,7 +121,7 @@ li {
 .header {
     display: flex;
     justify-content: space-between;
-    margin:3vh 5vw 0 5vw;
+    margin: 3vh auto 0 ;
     align-items: center;
     width: var(--width-body);
     align-self: center;
@@ -325,12 +325,12 @@ li {
 }
 
 .feature__shape--green {
-    background: var(--green);
-    box-shadow: 0px 0px 20px 1px var(--green);
+    background: var(--color-green);
+    box-shadow: 0px 0px 20px 1px var(--color-green);
 }
 .feature__shape--yellow {
-    background: var(--yellow);
-    box-shadow: 0px 0px 20px 1px var(--yellow);
+    background: var(--color-yellow);
+    box-shadow: 0px 0px 20px 1px var(--color-yellow);
 }
 .feature__shape--orange {
     background: var(--color-orange);
@@ -383,7 +383,7 @@ li {
 .ball__yellow {
     width: 50%;
     padding-bottom:50%;
-    background-color: var(--yellow);
+    background-color: var(--color-yellow);
     transition: transform 5s linear;
 }
 
@@ -393,6 +393,7 @@ li {
     margin: 130px auto;
     background-color: var(--color-blue);
     padding: 60px 0;
+    position: relative;
 }
 
 .newsletter__content {
@@ -419,6 +420,21 @@ li {
 
 .newsletter__content form .input {
     flex-grow: 1;
+}
+
+.newsletter .new-ball--green {
+    top: -35px;
+    left: 30%;
+}
+
+.newsletter .new-ball--orange {
+    left: -60px;
+    bottom: 10%;
+}
+
+.newsletter .new-ball--yellow {
+    right: -100px;
+    bottom: -100px;
 }
 
 /* Blog Showcase */
@@ -508,4 +524,39 @@ li {
 
 .footer__social a:last-child {
     margin-right: 0;
+}
+
+/* Experimental */
+.new-ball {
+    border-radius: 100%;
+    position: absolute;
+    transition: transform 0.5s;
+    will-change: transform;
+    transform: translateY(0px);
+}
+
+.new-ball--yellow {
+    background-color: var(--color-yellow);
+}
+
+.new-ball--orange {
+    background-color: var(--color-orange);
+}
+.new-ball--green {
+    background-color: var(--color-green);
+}
+
+.new-ball--s {
+    height: 70px;
+    width: 70px;
+}
+
+.new-ball--m {
+    height: 110px;
+    width: 110px;
+}
+
+.new-ball--l {
+    height: 200px;
+    width: 200px;
 }

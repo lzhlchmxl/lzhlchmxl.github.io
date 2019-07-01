@@ -1,5 +1,4 @@
 $(document).ready(function(){
-   
     triggerBalls();
     // $(".feature__item").hover(function(){
     //     $(".feature__shape", this).attr('class').split(' ')[1];
@@ -35,15 +34,12 @@ function triggerBalls() {
     $(".ball").map(function(index, ball){
         initiateBall($(ball));
      });
- 
+
 }
 
 function initiateBall(ball) {
-    console.log(ball.parent()[0]);
-    console.log(isElementInViewport(ball.parent()[0]));
     if (isElementInViewport(ball.parent()[0])) {
         moveBall(ball);
-        // console.log("in view");
     }
 
 }
