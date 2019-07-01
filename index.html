@@ -12,29 +12,47 @@
 <body>
     <!-- Navbar -->
     <nav class="header">
-        <ul class="header__nav">
-            <li class="header__link">
+        <div class="header__cover">
+            <ul class="header__nav">
+                <li class="header__link">
+                    <a href="features.html">Features</a>
+                </li>
+                <li class="header__link">
+                    <a href="pricing.html">Pricing</a>
+                </li>
+            </ul>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/logo.svg" alt="Logo Image"/>
+                </a>
+            </div>
+            <ul class="header__acc">
+                <li class="header__link">
+                    <a href="#" modal="login">Log In</a>
+                </li>
+                <button class="button" modal="signup">Get Started</button>
+                <form class="header__search">
+                    <input type="text" name="search" onfocusout="this.value=''">
+                </form>
+            </ul>
+        </div>
+        <div class="header__nav--mobile"></div>
+        <img class="header__icon--mobile" src="assets/nav_icon.svg" alt="Icon for mobile navigation bar"/>
+        <div class="header__cover--mobile"></div>
+        <ul class="header__acc header__acc--mobile">
+            <li class=" header__link header__link--mobile">
                 <a href="features.html">Features</a>
             </li>
-            <li class="header__link">
+            <li class="header__link header__link--mobile">
                 <a href="pricing.html">Pricing</a>
             </li>
-        </ul>
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/logo.svg" alt="Logo Image"/>
-            </a>
-        </div>
-        <ul class="header__acc">
-            <li class="header__link">
+            <li class="header__link header__link--mobile">
                 <a href="#" modal="login">Log In</a>
             </li>
-            <button class="button" modal="signup">Get Started</button>
-            <form class="header__search">
-                <input type="text" name="search" onfocusout="this.value=''">
-            </form>
+            <a href="" class="button button--mobile">Get Started</a>
         </ul>
     </nav>
+   
 
     <header class="intro">
         <div class="intro__info">
