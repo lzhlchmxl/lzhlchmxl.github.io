@@ -7,34 +7,39 @@
     <title>Talentree - Pricing</title>
     <!-- TODO: Missing description -->
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets//favicon.png">
+
     <link rel="stylesheet" href="css/index.css"/>
     <link href="https://fonts.googleapis.com/css?family=Muli:400,700|Quicksand:500&display=swap" rel="stylesheet">
 </head>
 <body>
    <!-- Navbar -->
    <nav class="header">
-      <ul class="header__nav">
-          <li class="header__link">
-              <a href="features.html">Features</a>
-          </li>
-          <li class="header__link header__link--selected">
-              <a href="pricing.html">Pricing</a>
-          </li>
-      </ul>
-      <div class="logo">
-          <a href="index.html">
-            <img src="assets/logo.svg" alt="Logo Image"/>
-          </a>
+      <div class="header__cover">
+        <ul class="header__nav">
+            <li class="header__link">
+                <a href="features.html">Features</a>
+            </li>
+            <li class="header__link header__link--selected">
+                <a href="pricing.html">Pricing</a>
+            </li>
+        </ul>
+        <div class="logo">
+            <a href="index.html">
+              <img src="assets/logo.svg" alt="Logo Image"/>
+            </a>
+        </div>
+        <ul class="header__acc">
+            <li class="header__link">
+                <a href="#" modal="login">Log In</a>
+            </li>
+            <button class="button" modal="signup">Get Started</button>
+            <form class="header__search">
+                <input type="text" name="search" onfocusout="this.value=''">
+            </form>
+        </ul>
       </div>
-      <ul class="header__acc">
-          <li class="header__link">
-              <a href="#" modal="login">Log In</a>
-          </li>
-          <button class="button" modal="signup">Get Started</button>
-          <form class="header__search">
-              <input type="text" name="search" onfocusout="this.value=''">
-          </form>
-      </ul>
   </nav>
 
   <!-- Header -->
