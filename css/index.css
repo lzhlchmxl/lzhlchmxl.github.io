@@ -18,6 +18,7 @@
     --width-content: 60vw;
 
     --spacing-h2: 3vh;
+    --spacing-section: 130px;
 
     --breakpoint-mobile: 480px;
 }
@@ -29,6 +30,8 @@
         --width-content: 80vw;
         --intro-info-width: 100%;
         --intro-image-width: 60%;
+
+        --spacing-section: 65px;
     }
 }
 
@@ -96,7 +99,7 @@ li {
 }
 
 /* Normalize */
-div, section, footer, header, dialog {
+div, section, footer, header, dialog, input {
     box-sizing: border-box;
 }
 
@@ -674,7 +677,7 @@ div, section, footer, header, dialog {
 /* Plans */
 .plans {
     width: var(--width-body);
-    margin: 130px auto;
+    margin: var(--spacing-section) auto;
 }
 
 .plans__grid {
@@ -737,7 +740,7 @@ div, section, footer, header, dialog {
 /* Newsletter */
 .newsletter {
     width: var(--width-body);
-    margin: 130px auto;
+    margin: var(--spacing-section) auto;
     background-color: var(--color-blue);
     padding: 60px 0;
     position: relative;
@@ -759,6 +762,17 @@ div, section, footer, header, dialog {
 }
 
 .newsletter__content form {
+    transition:
+        opacity 0.5s,
+        height 0.5s;
+}
+
+.newsletter__content form.hide {
+    opacity: 0;
+    height: 0;
+}
+
+.newsletter__content .newsletter__form--desktop {
     border: 2px solid var(--color-form-border);
     width: 90%;
     height: 80px;
@@ -767,8 +781,46 @@ div, section, footer, header, dialog {
     padding: 0 20px;
 }
 
-.newsletter__content form .input {
+.newsletter__content .newsletter__form--desktop .input {
     flex-grow: 1;
+}
+
+.newsletter__content .newsletter__form--mobile {
+    display: none;
+    text-align: center;
+    height: 145px;
+}
+
+.newsletter__content .newsletter__form--mobile .input {
+    border: 2px solid var(--color-form-border);
+    width: 100%;
+    padding: 0 20px;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+    .newsletter__content .newsletter__form--desktop {
+        display: none;
+    }
+
+    .newsletter__content .newsletter__form--mobile {
+        display: block;
+    }
+}
+
+.newsletter p {
+    transition: opacity 0.5s ease 0.5s;
+    opacity: 0;
+    display: none;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.newsletter p.show {
+    opacity: 1;
+    display: block;
 }
 
 .newsletter .new-ball--green {
@@ -792,10 +844,11 @@ div, section, footer, header, dialog {
     flex-direction: column;
     align-items: center;
     width: var(--width-body);
-    margin: 130px auto;
+    margin: var(--spacing-section) auto;
 }
 
 .blog-showcase__header {
+    text-align: center;
     margin-bottom: var(--spacing-h2);
 }
 
@@ -807,6 +860,27 @@ div, section, footer, header, dialog {
     grid-column-gap: 60px;
     grid-row-gap: 60px;
     width: var(--width-content);
+    transition: width 0.5s;
+}
+
+@media (max-width: 1000px) {
+    .blog-showcase__grid {
+        width: 100%;
+        grid-column-gap: 30px;
+    }
+}
+
+@media (max-width: 750px) {
+    .blog-showcase__grid {
+        grid-column-gap: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .blog-showcase__grid {
+        grid-template-columns: 1fr;
+        width: var(--width-content);
+    }
 }
 
 .blog-showcase__container {
@@ -815,11 +889,11 @@ div, section, footer, header, dialog {
     display: flex;
     flex-direction: column;
     text-decoration: none;
+    overflow-x: hidden;
 }
 
 .blog-showcase__container img {
     width: 100%;
-    height: 180px;
 }
 
 .blog-showcase__container__content {
@@ -858,7 +932,7 @@ div, section, footer, header, dialog {
     align-items: center;
     background-color: var(--color-white);
     padding: 60px 20px;
-    margin: 130px auto;
+    margin: var(--spacing-section) auto;
     width: var(--width-body);
     position: relative;
     text-align: center;
@@ -1097,7 +1171,7 @@ div, section, footer, header, dialog {
         right: 20px;
         z-index: 998;
     }
-    
+
     .header__nav--mobile:hover {
         cursor: pointer;
     }
@@ -1133,7 +1207,7 @@ div, section, footer, header, dialog {
     }
 
     .header__acc--mobile {
-        
+
         opacity:0;
         display: flex;
         flex-direction: column;
@@ -1160,6 +1234,7 @@ div, section, footer, header, dialog {
     .button--mobile {
         border-color: white;
     }
+}
 
     /* intro section */
     .intro {
