@@ -26,6 +26,7 @@ body {
     margin: 2vh 0;
     background-color: var(--color-bg);
     font-family: 'Muli', sans-serif;
+    position:relative;
 }
 
 h1,
@@ -207,7 +208,7 @@ li {
     display: flex;
     justify-content: center;
     margin:20vh auto 0 auto;
-    max-width: 1200px;
+    width: var(--width-body);
 }
 
 .intro__info {
@@ -219,6 +220,10 @@ li {
 
 .intro__info * {
     margin:2vh 0;
+}
+
+.intro__info--saving * {
+    margin:0;
 }
 
 .intro__info span {
@@ -252,7 +257,7 @@ li {
     margin-top:var(--spacing-h2);
     align-items: center;
     margin: 0 auto;
-    max-width: 1200px;
+    width: var(--width-body);
     position:relative;
 }
 
@@ -270,6 +275,7 @@ li {
 }
 
 .title__highlight {
+    font-weight: bold;
     color:var(--color-purple);
 }
 
@@ -278,6 +284,7 @@ li {
     font-size:2em;
     max-width: 220px;
     text-align: center;
+    margin-bottom: var(--spacing-h2);
 }
 
 .feature__items {
@@ -319,7 +326,7 @@ li {
     margin:20px 0;
 }
 
-.feature__shape--color-blue {
+.feature__shape--blue {
     background: var(--color-blue);
     box-shadow: 0px 0px 20px 1px var(--color-blue);
 }
@@ -336,6 +343,57 @@ li {
     background: var(--color-orange);
     box-shadow: 0px 0px 20px 1px var(--color-orange);
 }
+
+.text--container {
+    position:relative;
+    height: 5em;
+}
+
+.text--saving {
+    position:absolute;
+    right:0;
+}
+
+.features--saving {
+    flex-direction: row;
+}
+
+.title__header--saving {
+    max-width:400px;
+    text-align: left;
+}
+
+.title--saving {
+    align-items: flex-start;
+}
+
+.intro__info--saving {
+    transform: translateX(20%);
+}
+
+.intro__info--saving .intro__link--action {
+    margin-top:var(--spacing-h2);
+}
+
+.intro__image--container {
+    background: rgba(248, 160, 28, 0.22);
+    border-radius: 9999px;
+    padding-bottom: 53px;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .ball__container {
     position: absolute;
@@ -355,6 +413,16 @@ li {
 }
 
 .ball {
+    position:absolute;
+    transition: transform 20s linear;
+    border-radius: 9999px;
+    z-index:-999;
+    margin: 0;
+    top:0;
+    left:0;
+}
+
+.ball--static {
     position:absolute;
     transition: transform 20s linear;
     border-radius: 9999px;
@@ -385,6 +453,13 @@ li {
     padding-bottom:50%;
     background-color: var(--color-yellow);
     transition: transform 5s linear;
+}
+
+.ball__green {
+    width: 25%;
+    padding-bottom:25%;
+    background-color: var(--green);
+    left: -30px;
 }
 
 /* Newsletter */
