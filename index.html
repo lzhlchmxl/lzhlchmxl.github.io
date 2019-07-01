@@ -4,8 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Talentree</title>
-    <!-- TODO: Missing description -->
+    <meta
+        name="description"
+        content="It’s the HR software that makes everyone happier. From
+        candidate management, payroll to annual performance review, Talentree
+        has it all."
+    />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets//favicon.png">
@@ -66,7 +72,7 @@
             </div>
             <span class="tag">PEOPLE MANAGEMENT SOFTWARE</span>
             <h1>Full-circle HR Platform for Everyone in Your Company.</h1>
-            <p>It’s the HR software that makes everyone happier. From candidate mangement, payroll to annual performance review, Talentree has it all.</p>
+            <p>It’s the HR software that makes everyone happier. From candidate management, payroll to annual performance review, Talentree has it all.</p>
             <a href="#" class="button" modal="signup">Get Started</a>
         </div>
         <img class="intro__image" src="assets/intro_women_group.svg" alt="Image of happy women in a group"/>
@@ -225,11 +231,12 @@
         </div>
     </section>
 
+    <!-- Newsletter -->
     <section class="newsletter">
         <div class="newsletter__content">
             <span class="tag">Newsletter</span>
             <h2 class="h2--white">Don't miss a single things</h2>
-            <form action="" method="POST">
+            <form class="newsletter__form--desktop" action="" method="POST">
                 <input
                     class="input"
                     type="email"
@@ -237,6 +244,15 @@
                 >
                 <button class="button button--orange" type="submit">Get Started</button>
             </form>
+            <form class="newsletter__form--mobile" action="" method="POST">
+                <input
+                    class="input"
+                    type="email"
+                    placeholder="Enter your email address..."
+                >
+                <button class="button button--orange button--big" type="submit">Get Started</button>
+            </form>
+            <p>Thank you for signing up to Talentree's newsletter</p>
         </div>
         <div
             class="new-ball new-ball--yellow new-ball--l"
@@ -252,6 +268,7 @@
         ></div>
     </section>
 
+    <!-- Blow Showcase -->
     <section class="blog-showcase">
         <span class="tag">Blogs</span>
         <h2 class="blog-showcase__header">HR Tips & Tricks</h2>
@@ -277,6 +294,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <img class="logo" src="./assets/logo.svg" alt="Talentree logo">
         <p class="footer__content">HR made simple with Talentree, a platform that helps your company with everything HR related from hiring to benefits.</p>
@@ -369,5 +387,6 @@
     <script src="js/index.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/newsletter.js"></script>
 </body>
 </html>
