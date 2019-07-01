@@ -95,6 +95,7 @@ li {
     transition:
         background-color 0.5s ease,
         color 0.5s ease;
+    background-color: transparent;
 }
 
 .button:focus {
@@ -177,10 +178,23 @@ li {
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 3vh auto 0 ;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left:0;
+    height:80px;
+    background: white;
+    z-index: 1000;
+}
+
+.header__cover {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: var(--width-body);
-    align-self: center;
+    margin: 0 auto;
+
 }
 
 .header__nav {
@@ -189,18 +203,14 @@ li {
     z-index: 20;
 }
 
-.header__nav--mobile {
-    display:none;
-}
-
 .header .logo {
-    position: fixed;
+    /* position: fixed;
     left: 0;
-    right: 0;
+    right: 0; */
     z-index: 10;
     margin: 0 auto;
-    width: 100vw;
-    text-align: center;
+    /* width: 100vw;
+    text-align: center; */
 }
 
 .header__acc {
@@ -285,6 +295,10 @@ li {
     width: 150px;
     background-position: 10px center;
     padding-left:30px;
+}
+
+.header__acc--mobile, .header__nav--mobile, .header__cover--mobile, .header__icon--mobile {
+    display:none;
 }
 
 
@@ -1026,6 +1040,10 @@ li {
 
 /* responsive */
 @media screen and (max-width: 480px) {
+
+    .logo a {
+        align-self: center;
+    }
     .header__nav, .header__acc {
         display: none;
     }
@@ -1054,14 +1072,16 @@ li {
     }
 
     .header__cover--mobile {
+        display:block;
         background: white;
         position: fixed;
         width:100%;
-        height: 150px;
+        height: 110px;
         z-index: 997;
     }
 
     .header__icon--mobile {
+        display: block;
         position: fixed;
         width:30px;
         top:30px;
