@@ -28,6 +28,7 @@ body {
     background-color: var(--color-bg);
     font-family: 'Muli', sans-serif;
     position:relative;
+    overflow-x: hidden;
 }
 
 h1,
@@ -143,6 +144,10 @@ li {
 
 .header__nav {
     display:flex;
+}
+
+.header__nav--mobile {
+    display:none;
 }
 
 .header__acc {
@@ -862,4 +867,96 @@ li {
 .new-ball--l {
     height: 200px;
     width: 200px;
+}
+
+
+/* responsive */
+@media screen and (max-width: 480px) {
+    .header__nav, .header__acc {
+        display: none;
+    }
+
+    .header {
+        margin-top: 0;
+    }
+
+    .header__nav--mobile {
+        display: flex;
+        position:fixed;
+        width:50px;
+        height: 50px;
+        background: var(--color-orange);
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        transition: all 1s ease;
+        top: 20px;
+        right: 20px;
+        z-index: 998;
+    }
+    
+    .header__nav--mobile:hover {
+        cursor: pointer;
+    }
+
+    .header__cover--mobile {
+        background: white;
+        position: fixed;
+        width:100%;
+        height: 150px;
+        z-index: 997;
+    }
+
+    .header__icon--mobile {
+        position: fixed;
+        width:30px;
+        top:30px;
+        right:30px;
+        z-index:999;
+    }
+
+    .header__icon--mobile:hover {
+        cursor: pointer;
+    }
+    .header .logo {
+        display:flex;
+        height: 50px;
+        z-index:999;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+    }
+
+    .header__acc--mobile {
+        
+        opacity:0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 90px;
+        align-items: flex-start;
+        margin-left: 20px;
+        z-index: 999;
+        transition: opacity 1s 0.5s ease;
+    }
+
+    .header__link--mobile {
+        margin-bottom: 10px;
+    }
+
+    .header__link--mobile:hover {
+        color: white;
+    }
+
+    .header__link--mobile:after {
+        border-color: white;
+    }
+
+    .button--mobile {
+        border-color: white;
+    }
+
+    :root {
+        --width-body: 100vw;
+    }
 }
