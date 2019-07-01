@@ -28,6 +28,8 @@
     :root {
         --width-body: 90vw;
         --width-content: 80vw;
+        --intro-info-width: 100%;
+        --intro-image-width: 60%;
 
         --spacing-section: 65px;
     }
@@ -476,7 +478,7 @@ div, section, footer, header, dialog, input {
 
 .text--saving {
     position:absolute;
-    right:0;
+    right: 10px;
 }
 
 .features--saving {
@@ -585,7 +587,7 @@ div, section, footer, header, dialog, input {
 .ball__container--features {
     height: 100%;
     width:20vw;
-    right:0;
+    right:1%;
     top:0;
 }
 
@@ -1234,3 +1236,130 @@ div, section, footer, header, dialog, input {
     }
 }
 
+    /* intro section */
+    .intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .intro__info p {
+        display:none;
+    }
+
+    .ball__container--info {
+        right: 0;
+        left: auto;
+    }
+
+    .ball__orange {
+        left: 10vw;
+    }
+
+    .ball__purple {
+        top: 16vw;
+    }
+
+    .intro__info h1 {
+        font-size: 2.5em;
+    }
+
+    .ball__yellow {
+        width: 80%;
+        padding-bottom: 80%;
+    }
+
+    /* feature section */
+    .feature__items {
+        flex-direction: column;
+    }
+
+    .feature__item {
+        width: var(--width-content);
+        margin-bottom: 20%;
+    }
+
+    .feature__shape {
+        width: 30%;
+        padding-bottom: 30%;
+    }
+
+    /* saving section */
+    .text--saving {
+        right: auto;
+    }
+
+    .text--container {
+        margin-bottom: var(--spacing-h2);
+    }
+
+    .features--saving {
+        flex-direction: column-reverse;
+    }
+    .intro__image--container {
+        width: var(--intro-image-width);
+    }
+    .intro__info--saving {
+        transform: none;
+    }
+
+    .intro__info--saving .button {
+        margin-bottom: var(--spacing-h2);
+    }
+
+    .title--saving {
+        align-items: center;
+    }
+    .title__header--saving {
+        text-align: center;
+    }
+    .intro__info .button {
+        align-self: center;
+    }
+    .intro__info--saving p{
+        text-align: center;
+    }
+    .intro__image--saving {
+        width:90%;
+    }
+
+    /* pricing section */
+    .feature__item--pricing {
+        flex-direction: column;
+        margin-bottom: 8%;
+    }
+    .feature__items--pricing {
+        transform: none;
+    }
+
+    .feature__shape--pricing {
+        position: static;
+        transform: none;
+    }
+    .feature__head {
+        align-self: center;
+        text-align: left;
+    }
+    .feature__content--pricing {
+        align-self: center;
+    }
+    .button--more {
+        padding: 20px 60px;
+    }
+    
+    /* management section */
+    .features--management {
+        flex-direction: column;
+    }
+
+    .intro__image--mangement {
+        width: 90%;
+    }
+
+    /* testimonial section */
+    .testimonials__image {
+        height: 100px;
+    }
+    .feature__head--testimonial {
+        text-align: center;
+    }
+}
