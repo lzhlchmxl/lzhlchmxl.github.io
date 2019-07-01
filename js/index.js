@@ -49,6 +49,7 @@ function moveStaticBall(ball) {
 function keepAspectRatio() {
     $(".feature__shape--pricing").css("padding-bottom", $(".feature__shape--pricing").width());
     $(".intro__image--container").css("height", $(".intro__image--container").width());
+    $(".feature__shape--testimonials").css("height", $(".feature__shape--testimonials").width());
 }
 
 // Setup isScrolling variable
