@@ -20,12 +20,43 @@ $(document).ready(function(){
 
     keepAspectRatio();
 
-
     $(window).resize(function() {
         keepAspectRatio();
     });
 
+    let toggle = true;
+    $(".header__nav--mobile").click(function(){
+        expandNav();
+        toggle = false;
+    });
+    $(".header__icon--mobile").click(function(){
+        if (!toggle) {
+            closeNav();
+            toggle = true;
+        } else {
+            expandNav();
+            toggle = false;
+        }
+        
+    });
+
 });
+
+function expandNav() {
+    $(".header__nav--mobile").css({
+        "border-radius":"0",
+        "transform":"scale(17, 8)",
+    });
+    $(".header__acc--mobile").css("opacity", "1");
+}
+
+function closeNav() {
+    $(".header__nav--mobile").css({
+        "border-radius":"50px",
+        "transform":"scale(1, 1)",
+    });
+    $(".header__acc--mobile").css("opacity", "0");
+}
 
 function moveStaticBall(ball) {
     const viewportHeight = $(window).innerHeight();
