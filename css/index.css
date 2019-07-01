@@ -318,6 +318,8 @@ li {
 .feature__head {
     color: #6C6C6C;
     font-weight:bold;
+    width: 80%;
+    text-align: center;
 }
 
 .feature__content {
@@ -383,7 +385,7 @@ li {
 }
 
 
-
+/*pricing section*/
 .features__pricing {
     margin: 65px auto 130px auto;
     padding-top: 65px;
@@ -437,7 +439,7 @@ li {
     transform:translateY(30px);
 }
 
-
+/*management section*/
 .intro__info--management {
     transform: none;
 }
@@ -471,6 +473,21 @@ li {
     bottom:-100px;
 }
 
+/* Testimonial section */
+.feature__shape--testimonials {
+    display:flex;
+    padding-bottom:0;
+    width:75%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.testimonials__image {
+    width:85%;
+}
+
+
+/* floating balls*/
 .ball {
     position:absolute;
     transition: transform 20s linear;
