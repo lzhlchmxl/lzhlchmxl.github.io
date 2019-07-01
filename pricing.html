@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,700|Quicksand:500&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="header">
+   <!-- Navbar -->
+   <nav class="header">
       <ul class="header__nav">
           <li class="header__link">
               <a href="features.html">Features</a>
@@ -26,8 +26,10 @@
           </a>
       </div>
       <ul class="header__acc">
-          <li class="header__link">Log In</li>
-          <a href="" class="button">Get Started</a>
+          <li class="header__link">
+              <a href="#" modal="login">Log In</a>
+          </li>
+          <button class="button" modal="signup">Get Started</button>
           <form class="header__search">
               <input type="text" name="search" onfocusout="this.value=''">
           </form>
@@ -65,7 +67,7 @@
           <li>CPP, EI, WSIB, calcualtions, Year-end T4s, T4As, RL-1s</li>
           <div class="divider"></div>
         </ul>
-        <a href="#" class="button button--orange button--big">Get Started</a>
+        <a href="#" class="button button--orange button--big" modal="signup">Get Started</a>
         <div
             class="new-ball new-ball--blue new-ball--blue--glow new-ball--sm"
             data-scroll="0"
@@ -81,7 +83,7 @@
           <li>Automated payroll calculation and processing, Custom payroll reports</li>
           <div class="divider"></div>
         </ul>
-        <a href="#" class="button button--orange button--big">Get Started</a>
+        <a href="#" class="button button--orange button--big" modal="signup">Get Started</a>
         <div
             class="new-ball new-ball--green new-ball--green--glow new-ball--sm"
             data-scroll="0"
@@ -97,7 +99,7 @@
           <li>Dedicated payroll manager & Dedicated account manager</li>
           <div class="divider"></div>
         </ul>
-        <a href="#" class="button button--orange button--big">Get Started</a>
+        <a href="#" class="button button--orange button--big" modal="signup">Get Started</a>
         <div
             class="new-ball new-ball--yellow new-ball--yellow--glow new-ball--sm"
             data-scroll="0"
@@ -108,7 +110,7 @@
         <ul>
           <li>Looking for something specific? We can create a plan that work for you and your team.</li>
         </ul>
-        <a href="#" class="button button--orange button--big">Get Started</a>
+        <a href="#" class="button button--orange button--big" modal="signup">Get Started</a>
         <div
             class="new-ball new-ball--purple new-ball--purple--glow new-ball--sm"
             data-scroll="0"
@@ -140,9 +142,86 @@
         ></div>
     </footer>
 
+    <!-- Modal -->
+    <dialog class="modal">
+        <div class="modal__backdrop"></div>
+        <div class="modal__container">
+            <div class="modal__login">
+                <form action="">
+                    <label for="username">User Name</label>
+                    <input
+                        type="text"
+                        id="username"
+                        class="input--modal"
+                        required
+                        minlength="4"
+                    >
+                    <label for="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        class="input--modal"
+                        required
+                        minlength="8"
+                    >
+                    <a href="#" class="info">Forgot Password</a>
+                    <button class="button button--orange button--big">Login</button>
+                </form>
+            </div>
+            <div class="modal__signup">
+                <form action="">
+                    <label for="firstname">First Name</label>
+                    <input
+                        type="text"
+                        id="firstname"
+                        class="input--modal"
+                        required
+                    >
+                    <label for="lastname">Last Name</label>
+                    <input
+                        type="text"
+                        id="lastname"
+                        class="input--modal"
+                        required
+                    >
+                    <label for="email">Work Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="input--modal"
+                        required
+                    >
+                    <label for="company">Company Name</label>
+                    <input
+                        type="text"
+                        id="company"
+                        class="input--modal"
+                        required
+                    >
+                    <button class="button button--orange button--big">Login</button>
+                    <a href="#" class="info">Already have an account? Log in here.</a>
+                </form>
+            </div>
+            <div class="modal__forgot-password">
+                <form action="">
+                    <p>Please enter the email address associated with your Talentree account. If you don't remember the email address you used to register, please contact our support team</p>
+                    <label for="username">User Name</label>
+                    <input
+                        type="text"
+                        id="username"
+                        class="input--modal"
+                        required
+                    >
+                    <button class="button button--orange button--big">Login</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
     <!-- Scripts -->
     <script src="frameworks/jquery.js"></script>
     <script src="js/index.js"></script>
     <script src="js/parallax.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>
