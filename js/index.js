@@ -12,35 +12,43 @@ $(document).ready(function(){
     $(window).scroll(function(){
         // console.log($(window).innerHeight());
 
-        const viewportHeight = $(window).innerHeight();
-        // view port height subtract the difference between eleTop and scroll height
+        $(".ball--static").map(function(index, ball){
+            moveStaticBall(ball);
+        });
 
-        let offset = $(".ball--static").length && $(".ball--static").offset().top - $(window).scrollTop();
-
-        if (offset > viewportHeight) {
-            offset = viewportHeight;
-        } else if (offset < 0) {
-            offset = 0;
-        }  
-        const viewDiff = viewportHeight - offset;
-        const ratio =  $(".ball--static").parent().innerHeight() / viewportHeight -0.15;
-
-        const moveDiff = viewDiff * ratio;
-
-        $(".ball--static").stop().animate({"marginTop": moveDiff}, "slow" );
     });
 
-    redrawBalls();
+    keepAspectRatio();
+
 
     $(window).resize(function() {
-        redrawBalls();
+        keepAspectRatio();
     });
 
 });
 
+function moveStaticBall(ball) {
+    const viewportHeight = $(window).innerHeight();
+    // view port height subtract the difference between eleTop and scroll height
 
-function redrawBalls() {
+    let offset = $(ball).offset().top - $(window).scrollTop();
+
+    if (offset > viewportHeight) {
+        offset = viewportHeight;
+    } else if (offset < 0) {
+        offset = 0;
+    }  
+    const viewDiff = viewportHeight - offset;
+    const ratio =  $(ball).parent().innerHeight() / viewportHeight -0.15;
+
+    const moveDiff = viewDiff * ratio;
+
+    $(ball).stop().animate({"marginTop": moveDiff}, "slow" );
+}
+
+function keepAspectRatio() {
     $(".feature__shape--pricing").css("padding-bottom", $(".feature__shape--pricing").width());
+    $(".intro__image--container").css("height", $(".intro__image--container").width());
 }
 
 // Setup isScrolling variable

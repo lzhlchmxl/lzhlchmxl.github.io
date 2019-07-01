@@ -401,8 +401,8 @@ li {
 .intro__image--container {
     background: rgba(248, 160, 28, 0.22);
     border-radius: 9999px;
-    padding-bottom: 53px;
     position: relative;
+    display:flex;
 }
 
 
@@ -461,9 +461,13 @@ li {
 }
 
 
+.intro__info--management {
+    transform: none;
+}
 
-
-
+.intro__image--container--management {
+    background: rgba(114, 190, 101, 0.25);
+}
 
 
 .ball__container {
@@ -487,7 +491,7 @@ li {
     height: 25%;
     width:100px;
     left:0;
-    bottom:-50px;
+    bottom:-100px;
 }
 
 .ball {
@@ -504,7 +508,7 @@ li {
     position:absolute;
     transition: transform 20s linear;
     border-radius: 9999px;
-    z-index:-999;
+    z-index: -999;
     margin: 0;
     top:0;
     left:0;
@@ -536,15 +540,19 @@ li {
 .ball__yellow--pricing {
     z-index:999;
     left: -50px;
-    width: 100%;
-    padding-bottom: 100%;
+    width: 150%;
+    padding-bottom: 150%;
 }
 
 .ball__green {
     width: 25%;
     padding-bottom:25%;
-    background-color: var(--green);
+    background-color: var(--color-green);
     left: -30px;
+}
+
+.ball__blue--management {
+    background-color: var(--color-blue);
 }
 
 /* Plans */
