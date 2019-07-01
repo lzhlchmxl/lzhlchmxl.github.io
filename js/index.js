@@ -20,7 +20,9 @@ $(document).ready(function(){
 
         if (offset > viewportHeight) {
             offset = viewportHeight;
-        }       
+        } else if (offset < 0) {
+            offset = 0;
+        }  
         const viewDiff = viewportHeight - offset;
         const ratio =  $(".ball--static").parent().innerHeight() / viewportHeight -0.15;
 
@@ -29,7 +31,18 @@ $(document).ready(function(){
         $(".ball--static").stop().animate({"marginTop": moveDiff}, "slow" );
     });
 
+    redrawBalls();
+
+    $(window).resize(function() {
+        redrawBalls();
+    });
+
 });
+
+
+function redrawBalls() {
+    $(".feature__shape--pricing").css("padding-bottom", $(".feature__shape--pricing").width());
+}
 
 // Setup isScrolling variable
 var isScrolling;
