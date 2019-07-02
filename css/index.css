@@ -1,5 +1,6 @@
 :root {
     --color-bg: rgba(196, 196, 196, 0.08);
+    --color-nav: #FAFAFA;
     --color-modal-bg: rgba(299, 299,299, 0.75);
     --color-white: #fff;
     --color-purple: #E350CB;
@@ -51,7 +52,7 @@ body {
     font-family: 'Muli', sans-serif;
     position:relative;
     width: 100vw;
-
+    overflow-x: hidden;
 }
 
 body.modal--open {
@@ -197,7 +198,8 @@ div, section, footer, header, dialog, input {
 /* Logo */
 .logo {
     width: 170px;
-    height: 30px
+    height: 30px;
+    opacity: 0.99;
 }
 
 /* Tag */
@@ -217,7 +219,7 @@ div, section, footer, header, dialog, input {
     top: 0;
     left:0;
     height:80px;
-    background: white;
+    background-color: var(--color-nav);
     z-index: 1000;
 }
 
@@ -234,23 +236,18 @@ div, section, footer, header, dialog, input {
     display:flex;
     position: relative;
     z-index: 20;
+    width: 233px;
 }
 
 .header .logo {
-    /* position: fixed;
-    left: 0;
-    right: 0; */
     z-index: 10;
-    margin: 0 auto;
-    /* width: 100vw;
-    text-align: center; */
 }
 
 .header__acc {
     display:flex;
     align-items:center;
     position: relative;
-    margin-right: 50px;
+    /* margin-right: 50px; */
     z-index: 20;
 }
 
@@ -258,6 +255,7 @@ div, section, footer, header, dialog, input {
     position: relative;
     margin-right: 20px;
     transition: color 0.5s ease;
+    font-size: 18px;
 }
 
 .header__link a {
@@ -392,7 +390,8 @@ div, section, footer, header, dialog, input {
 
 .text {
     color:white;
-    font-family: DM Sans;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
     font-size: 5em;
     position:relative;
 }
@@ -986,7 +985,7 @@ div, section, footer, header, dialog, input {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    z-index: 2000;
     opacity: 0;
     visibility: hidden;
     transition:opacity 0.5s;
@@ -1033,6 +1032,33 @@ div, section, footer, header, dialog, input {
     height: 100%;
     width: 100%;
     opacity: 1;
+}
+
+/* Hide the form when submitted*/
+.modal__container .modal__signup form {
+    height: 490px;
+    opacity: 1;
+    transition:
+            opacity 0.5s ease
+            height 0.2s;
+}
+
+.modal__container > div form.hide {
+    opacity: 0;
+    height: 0;
+}
+
+/* Hide the confirmation content */
+.modal__container > div > p {
+    transition: opacity 0.5s ease 0.5s;
+    opacity: 0;
+    display: none;
+    text-align: center;
+}
+
+.modal__container > div > p.show {
+    opacity: 1;
+    display: block;
 }
 
 .modal__container .info {
@@ -1245,30 +1271,34 @@ div, section, footer, header, dialog, input {
     .header__icon--mobile:hover {
         cursor: pointer;
     }
+
     .header .logo {
         display:flex;
         height: 50px;
         z-index:999;
         position: fixed;
         top: 20px;
-        left: 20px;
+        left: 25px;
     }
 
     .header__acc--mobile {
-
         opacity:0;
         display: flex;
         flex-direction: column;
         position: fixed;
         top: 90px;
         align-items: flex-start;
-        margin-left: 20px;
+        margin-left: 30px;
         z-index: 999;
         transition: opacity 1s 0.5s ease;
     }
 
     .header__link--mobile {
         margin-bottom: 10px;
+    }
+
+    .header__link--mobile:last-of-type {
+        margin-bottom: 25px;
     }
 
     .header__link--mobile:hover {
@@ -1389,7 +1419,7 @@ div, section, footer, header, dialog, input {
     .button--more {
         padding: 20px 60px;
     }
-    
+
     /* management section */
     .features--management {
         flex-direction: column;

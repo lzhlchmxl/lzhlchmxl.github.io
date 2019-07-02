@@ -12,6 +12,9 @@ function toggleModal(e) {
 
   // Determine if the modal is currently open
   if(!$('.modal[open]').length) {
+    // Close the nav menu
+    closeNav();
+
     // Open the modal
     $('.modal').attr('open', '');
 
