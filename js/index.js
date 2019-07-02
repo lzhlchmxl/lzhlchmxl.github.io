@@ -37,7 +37,7 @@ $(document).ready(function(){
             expandNav();
             toggle = false;
         }
-        
+
     });
 
 });
@@ -45,7 +45,7 @@ $(document).ready(function(){
 function expandNav() {
     $(".header__nav--mobile").css({
         "border-radius":"0",
-        "transform":"scale(17, 8)",
+        "transform":"scale(17, 6)",
     });
     $(".header__acc--mobile").css("opacity", "1");
 }
@@ -68,7 +68,7 @@ function moveStaticBall(ball) {
         offset = viewportHeight;
     } else if (offset < 0) {
         offset = 0;
-    }  
+    }
     const viewDiff = viewportHeight - offset;
     const ratio =  $(ball).parent().innerHeight() / viewportHeight -0.15;
 
