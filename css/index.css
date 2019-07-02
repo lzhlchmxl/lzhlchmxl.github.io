@@ -1148,6 +1148,28 @@ div, section, footer, header, dialog, input {
 
 
 /* responsive */
+
+@media (max-width: 1024px) {
+    .feature__items--pricing {
+        transform: translateX(5%);
+        width: 70vw;
+    }
+    .ball__container--info {
+        left: auto;
+        right:0;
+    }
+    .intro__info {
+        position:static;
+    }
+    .ball__orange {
+        left: auto;
+        right: -10vw;
+    }
+
+    .ball__purple {
+        top: 10vw;
+    }
+}
 @media (max-width: 780px) {
     .feature__items {
         flex-wrap: wrap;
@@ -1163,8 +1185,9 @@ div, section, footer, header, dialog, input {
         flex-direction: column;
         align-items: center;
     }
-    .ball__container--info {
-        left: 0;
+
+    .intro__info--saving {
+        transform: translateX(5%);
     }
 }
 
